@@ -1,0 +1,103 @@
+:root{
+  --bg:#0b1220;
+  --panel:#0f1724;
+  --accent:#6ee7b7;
+  --muted:#9aa6b2;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{background:linear-gradient(180deg,var(--bg),#07111a);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:20px}
+.container{max-width:920px;width:100%}
+h1{text-align:center;margin:0 0 12px;font-weight:600}
+.controls{display:flex;gap:12px;align-items:center;justify-content:center;margin-bottom:10px}
+.controls button{background:var(--panel);color:var(--accent);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:6px;cursor:pointer}
+.controls button:active{transform:translateY(1px)}
+.hint{color:var(--muted);font-size:13px;margin-left:8px}
+canvas{display:block;margin:0 auto;background:linear-gradient(180deg,#07202a,#041018);border-radius:8px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+.status{text-align:center;margin-top:8px;color:var(--muted)}
+:root{
+  --bg:#0b1220;
+  --panel:#0f1724;
+  --accent:#6ee7b7;
+  --muted:#9aa6b2;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{background:linear-gradient(180deg,var(--bg),#07111a);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:18px}
+.container{max-width:960px;width:100%}
+h1{text-align:center;margin:0 0 12px;font-weight:600}
+.controls{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:8px}
+.top-controls{margin-bottom:6px}
+.left-controls, .right-controls{display:flex;gap:8px;align-items:center}
+.controls button{background:var(--panel);color:var(--accent);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:6px;cursor:pointer}
+.controls button:active{transform:translateY(1px)}
+.hint{color:var(--muted);font-size:13px;margin-left:8px}
+.canvas-wrap{position:relative;max-width:100%;display:flex;justify-content:center}
+canvas{display:block;margin:0 auto;background:linear-gradient(180deg,#07202a,#041018);border-radius:8px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+.status{text-align:center;margin-top:8px;color:var(--muted)}
+
+/* Multiplayer panel */
+.multiplayer-panel{background: rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;margin-bottom:10px;color:var(--muted)}
+.mp-row{display:flex;gap:8px;align-items:center;margin-top:6px}
+.mp-row.textareas{gap:12px}
+.mp-row.textareas > div{flex:1;display:flex;flex-direction:column}
+.mp-row.textareas label{font-size:12px;color:var(--muted);margin-bottom:4px}
+.mp-row.textareas textarea{min-height:80px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:8px;border-radius:6px;resize:vertical}
+.mp-status{margin-top:6px;font-size:13px;color:var(--muted)}
+
+/* Mobile touch pads */
+.touch-pad{position:absolute;top:0;bottom:0;width:48%;display:flex;flex-direction:column;justify-content:center;pointer-events:auto;opacity:0.0001}
+.touch-pad.left{left:0}
+.touch-pad.right{right:0}
+.touch-pad .control-btn{margin:10px auto;background:rgba(255,255,255,0.04);color:var(--accent);width:64px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;user-select:none}
+.touch-pad .control-btn:active{transform:translateY(1px);opacity:0.9}
+
+/* visible controls on small screens */
+@media (max-width:900px){
+  .touch-pad{opacity:1}
+  .touch-pad .control-btn{width:74px;height:44px}
+  .hint-row{display:none}
+}
+:root{
+  --bg:#0b1220;
+  --panel:#0f1724;
+  --accent:#6ee7b7;
+  --muted:#9aa6b2;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{background:linear-gradient(180deg,var(--bg),#07111a);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:18px}
+.container{max-width:960px;width:100%}
+h1{text-align:center;margin:0 0 12px;font-weight:600}
+.controls{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:8px}
+.top-controls{margin-bottom:6px}
+.left-controls, .right-controls{display:flex;gap:8px;align-items:center}
+.controls button{background:var(--panel);color:var(--accent);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:6px;cursor:pointer}
+.controls button:active{transform:translateY(1px)}
+.hint{color:var(--muted);font-size:13px;margin-left:8px}
+.canvas-wrap{position:relative;max-width:100%;display:flex;justify-content:center}
+canvas{display:block;margin:0 auto;background:linear-gradient(180deg,#07202a,#041018);border-radius:8px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+.status{text-align:center;margin-top:8px;color:var(--muted)}
+
+/* Multiplayer panel */
+.multiplayer-panel{background: rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;margin-bottom:10px;color:var(--muted)}
+.mp-row{display:flex;gap:8px;align-items:center;margin-top:6px}
+.mp-row.textareas{gap:12px}
+.mp-row.textareas > div{flex:1;display:flex;flex-direction:column}
+.mp-row.textareas label{font-size:12px;color:var(--muted);margin-bottom:4px}
+.mp-row.textareas textarea{min-height:80px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:8px;border-radius:6px;resize:vertical}
+.mp-status{margin-top:6px;font-size:13px;color:var(--muted)}
+
+/* Mobile touch pads */
+.touch-pad{position:absolute;top:0;bottom:0;width:48%;display:flex;flex-direction:column;justify-content:center;pointer-events:auto;opacity:0.0001}
+.touch-pad.left{left:0}
+.touch-pad.right{right:0}
+.touch-pad .control-btn{margin:10px auto;background:rgba(255,255,255,0.04);color:var(--accent);width:64px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;user-select:none}
+.touch-pad .control-btn:active{transform:translateY(1px);opacity:0.9}
+
+/* visible controls on small screens */
+@media (max-width:900px){
+  .touch-pad{opacity:1}
+  .touch-pad .control-btn{width:74px;height:44px}
+  .hint-row{display:none}
+}

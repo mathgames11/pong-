@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pong — Simple HTML5</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pong</h1>
+    <div class="controls">
+      <button id="btn-new">New Game</button>
+      <button id="btn-pause">Pause</button>
+      <label><input type="checkbox" id="ai-toggle" /> Right paddle AI</label>
+      <span class="hint">Left: W/S &nbsp; Right: ↑/↓</span>
+    </div>
+    <canvas id="game" width="800" height="500"></canvas>
+    <div id="status" class="status">Press New Game to start</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pong — HTML5 (with Sound, Mobile & P2P Multiplayer)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pong</h1>
+
+    <div class="controls top-controls">
+      <div class="left-controls">
+        <button id="btn-new">New Game</button>
+        <button id="btn-pause">Pause</button>
+        <label><input type="checkbox" id="ai-toggle" /> Right paddle AI</label>
+      </div>
+
+      <div class="right-controls">
+        <label><input type="checkbox" id="sound-toggle" checked /> Sound</label>
+        <label><input type="checkbox" id="mobile-toggle" checked /> Mobile Controls</label>
+      </div>
+    </div>
+
+    <div class="multiplayer-panel">
+      <strong>Multiplayer (P2P manual SDP)</strong>
+      <div class="mp-row">
+        <div>
+          <button id="btn-host">Host (create offer)</button>
+          <button id="btn-set-remote-answer">Set remote answer</button>
+        </div>
+        <div>
+          <button id="btn-join">Join (set offer & create answer)</button>
+        </div>
+      </div>
+      <div class="mp-row textareas">
+        <div>
+          <label>Local SDP</label>
+          <textarea id="local-sdp" readonly></textarea>
+        </div>
+        <div>
+          <label>Remote SDP</label>
+          <textarea id="remote-sdp" placeholder="Paste remote SDP here"></textarea>
+        </div>
+      </div>
+      <div id="mp-status" class="mp-status">P2P: idle</div>
+    </div>
+
+    <div class="controls hint-row">
+      <span class="hint">Left: W/S or touch left side • Right: ↑/↓ or touch right side</span>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="game" width="800" height="500"></canvas>
+
+      <!-- Mobile on-screen controls -->
+      <div id="touch-left" class="touch-pad left">
+        <div class="control-btn up" data-dir="up">▲</div>
+        <div class="control-btn down" data-dir="down">▼</div>
+      </div>
+      <div id="touch-right" class="touch-pad right">
+        <div class="control-btn up" data-dir="up">▲</div>
+        <div class="control-btn down" data-dir="down">▼</div>
+      </div>
+    </div>
+
+    <div id="status" class="status">Press New Game to start</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pong — HTML5 (Sound, Mobile & P2P)</title>
+  <meta name="description" content="Simple Pong game with sound, mobile touch controls and peer-to-peer multiplayer (manual SDP)." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pong</h1>
+
+    <div class="controls top-controls">
+      <div class="left-controls">
+        <button id="btn-new">New Game</button>
+        <button id="btn-pause">Pause</button>
+        <label><input type="checkbox" id="ai-toggle" /> Right paddle AI</label>
+      </div>
+
+      <div class="right-controls">
+        <label><input type="checkbox" id="sound-toggle" checked /> Sound</label>
+        <label><input type="checkbox" id="mobile-toggle" checked /> Mobile Controls</label>
+      </div>
+    </div>
+
+    <div class="multiplayer-panel">
+      <strong>Multiplayer (P2P manual SDP)</strong>
+      <div class="mp-row">
+        <div>
+          <button id="btn-host">Host (create offer)</button>
+          <button id="btn-set-remote-answer">Set remote answer</button>
+        </div>
+        <div>
+          <button id="btn-join">Join (set offer & create answer)</button>
+        </div>
+      </div>
+      <div class="mp-row textareas">
+        <div>
+          <label>Local SDP</label>
+          <textarea id="local-sdp" readonly></textarea>
+        </div>
+        <div>
+          <label>Remote SDP</label>
+          <textarea id="remote-sdp" placeholder="Paste remote SDP here"></textarea>
+        </div>
+      </div>
+      <div id="mp-status" class="mp-status">P2P: idle</div>
+    </div>
+
+    <div class="controls hint-row">
+      <span class="hint">Left: W/S or touch left side • Right: ↑/↓ or touch right side</span>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="game" width="800" height="500"></canvas>
+
+      <!-- Mobile on-screen controls -->
+      <div id="touch-left" class="touch-pad left">
+        <div class="control-btn up" data-dir="up">▲</div>
+        <div class="control-btn down" data-dir="down">▼</div>
+      </div>
+      <div id="touch-right" class="touch-pad right">
+        <div class="control-btn up" data-dir="up">▲</div>
+        <div class="control-btn down" data-dir="down">▼</div>
+      </div>
+    </div>
+
+    <div id="status" class="status">Press New Game to start</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
